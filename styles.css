@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
+/* Usual stuff for bg and aligns and stuff */
+* {
+	color: white;
+	font-family: "Inconsolata", monospace;
+
+	--bgc: #19191d;
+}
+html {
+	background-color: var(--bgc);
+	padding: 0;
+	margin: 0;
+}
+body {
+	padding: 0;
+	margin: 0;
+}
+h1 {
+	margin: 5px;
+	font-weight: 300;
+}
+
+h2.bigTitle {
+	margin: 5px;
+	font-size: 4.5rem;
+}
+p {
+	padding: 0;
+	margin: 0;
+}
+
+#headbar {
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	display: flex;
+	justify-content: space-between;
+
+	border-radius: 5px;
+
+	background-color: rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.5);
+
+	margin: 0;
+}
+
+#content {
+	width: 100%;
+}
+
+#topBanner {
+	height: 30rem;
+	border-radius: 15px;
+	margin: 20px;
+	box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	position: relative;
+}
+#topBanner .hbContent {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 30%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#topBanner .hbContent p {
+	padding-left: 15%;
+	text-align: left;
+}
+#topBanner #gradOverlay {
+	background: linear-gradient(
+		90deg,
+		rgba(0, 0, 0, 1) 0%,
+		rgba(0, 0, 0, 0.7441351540616247) 30%,
+		rgba(0, 0, 0, 0) 100%
+	);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+#topBanner img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.actionRow {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
+button::before {
+	content: "[ ";
+}
+button::after {
+	content: " ]";
+}
+
+button.material-symbols-outlined::before,
+button.material-symbols-outlined::after {
+	content: none;
+}
+
+button {
+	background-color: rgba(0, 0, 0, 0);
+	border: none;
+	color: unset;
+	font-weight: 600;
+	transition: 250ms;
+	border-radius: 5px;
+	letter-spacing: normal;
+}
+
+button:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+	transition: 250ms;
+	border-radius: 5px;
+	letter-spacing: 0.1em;
+}
+
+button.playBig {
+	font-size: 1.5rem;
+	margin: 10px;
+}
