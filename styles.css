@@ -4,7 +4,7 @@
 	color: white;
 	font-family: "Inconsolata", monospace;
 
-	--bgc: #19191d;
+	--bgc: #20202c;
 }
 html {
 	background-color: var(--bgc);
@@ -51,12 +51,12 @@ p {
 }
 
 #topBanner {
+	position: relative;
 	height: 30rem;
-	border-radius: 15px;
 	margin: 20px;
+	border-radius: 15px;
 	box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.5);
 	overflow: hidden;
-	position: relative;
 }
 #topBanner .hbContent {
 	position: absolute;
@@ -133,4 +133,140 @@ button:hover {
 button.playBig {
 	font-size: 1.5rem;
 	margin: 10px;
+}
+
+/* Video Row */
+
+h2.rowHeader {
+	margin-left: 30px;
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+
+.videoRow {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	margin: 20px;
+	margin-top: 0;
+	overflow-x: hidden;
+}
+.videoRow .endOverlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: end;
+	padding-right: 20px;
+	height: 100%;
+	width: 250px;
+	background: linear-gradient(
+		-90deg,
+		rgba(0, 0, 0, 1) 0%,
+		rgba(0, 0, 0, 0.819765406162465) 70%,
+		rgba(0, 0, 0, 0) 100%
+	);
+	z-index: 1000;
+}
+
+.video {
+	--w: 200px;
+	--h: 300px;
+
+	margin: 10px;
+	flex-shrink: 0;
+	transition: 0.8s;
+	width: var(--w);
+	height: var(--h);
+
+	border-radius: 15px;
+	overflow: hidden;
+	box-shadow: 0px 0px 30px 0px #000000;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.video:hover {
+	width: calc(var(--w) * 2);
+	transition: 0.8s;
+}
+
+.videoRow .video .cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.videoRow .video .cover img {
+	height: 100%;
+	object-fit: contain;
+}
+
+.videoRow .video .cover .center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 80px;
+	color: #fff;
+}
+
+.videoRow .video .slide {
+	width: var(--w) !important;
+	height: var(--h);
+	transition: 0.5s;
+}
+
+.videoRow .video .slide.slide1 {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	transition: 0.7s;
+}
+
+.videoRow .video:hover .slide.slide1 {
+	transform: translateX(0px);
+}
+
+.videoRow .video .slide.slide2 {
+	position: relative;
+	display: flex;
+	/* justify-content: center;
+	align-items: center; */
+	padding: 20px;
+	box-sizing: border-box;
+	transition: 0.8s;
+	transform: translate(0px, calc(var(--h) * -1));
+}
+.videoRow .video:hover .slide.slide2 {
+	transform: translate(var(--w), calc(var(--h) * -1));
+	transition: 0.8s;
+}
+
+.slide.slide2 .content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1 1 auto;
+}
+
+.content .spacer {
+	flex: 1 1 auto;
+}
+
+.content p {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 7; /* number of lines to show */
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.slide.slide2 .content .playBig {
+	font-size: 1rem;
 }
