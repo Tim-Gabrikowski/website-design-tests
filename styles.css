@@ -151,6 +151,7 @@ h2.rowHeader {
 	margin: 20px;
 	margin-top: 0;
 	overflow-x: hidden;
+	border-radius: 20px;
 }
 .videoRow .endOverlay {
 	position: absolute;
