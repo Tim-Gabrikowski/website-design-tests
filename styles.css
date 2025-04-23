@@ -6,24 +6,45 @@ html {
 	--app-header-bar-height: 3lh;
 }
 body {
-	--text: #040316;
-	--background: #dce0e5;
-	--on-background: #c6c8cd;
-	--primary: #f39039;
-	--secondary: #906b5a;
-	--accent: #a8b6bd;
-	--warn: #ff0000;
-	--hover-highlight: rgba(0, 0, 0, 0.35);
+	/* https://www.realtimecolors.com/?colors=272a49-fef7e7-6c70a3-9ea2c8-4c59ec&fonts=Pathway%20Extreme-Pathway%20Extreme */
+	--text: #242634;
+	--text-dim: #5e6388;
+	--background: #fef7e7;
+
+	--primary: #5c6093;
+	--primary-light: #9194ba;
+	--primary-dark: #31334e;
+
+	--secondary: #364c69;
+	--secondary-light: #89a2c2;
+	--secondary-dark: #3d5576;
+
+	--accent: #405b51;
+	--accent-light: #96b5aa;
+	--accent-dark: #354b43;
+
+	--warn: #bf616a;
+	--success: #a3be8c;
 }
 body.dark-theme {
-	--text: #eae9fc;
-	--background: #1a1e23;
-	--on-background: #33353a;
-	--primary: #c6620c;
-	--secondary: #a5806f;
-	--accent: #425057;
-	--warn: #ff0000;
-	--hover-highlight: rgba(255, 255, 255, 0.35);
+	--text: #fef7e7;
+	--text-dim: #b8b3c2;
+	--background: #242634;
+
+	--primary: #5c6093;
+	--primary-light: #9194ba;
+	--primary-dark: #31334e;
+
+	--secondary: #364c69;
+	--secondary-light: #89a2c2;
+	--secondary-dark: #3d5576;
+
+	--accent: #405b51;
+	--accent-light: #96b5aa;
+	--accent-dark: #354b43;
+
+	--warn: #bf616a;
+	--success: #a3be8c;
 }
 
 * {
@@ -51,7 +72,7 @@ p {
 	margin: 0;
 }
 h1 {
-	font-weight: 500;
+	font-weight: 600;
 }
 
 span.flex-spacer {
