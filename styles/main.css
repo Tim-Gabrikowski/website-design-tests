@@ -13,14 +13,17 @@ body {
 	--on-background: #feedc4;
 
 	--primary: #5c6093;
+	--text-primary: #fef7e7;
 	--primary-light: #9194ba;
 	--primary-dark: #31334e;
 
 	--secondary: #364c69;
+	--text-secondary: #fef7e7;
 	--secondary-light: #89a2c2;
 	--secondary-dark: #1a2533;
 
 	--accent: #405b51;
+	--text-accent: #fef7e7;
 	--accent-light: #96b5aa;
 	--accent-dark: #354b43;
 
@@ -34,14 +37,17 @@ body.dark-theme {
 	--on-background: #2d2f3f;
 
 	--primary: #5c6093;
+	--text-primary: #fef7e7;
 	--primary-light: #9194ba;
 	--primary-dark: #31334e;
 
 	--secondary: #364c69;
+	--text-secondary: #fef7e7;
 	--secondary-light: #89a2c2;
 	--secondary-dark: #1a2533;
 
 	--accent: #405b51;
+	--text-accent: #fef7e7;
 	--accent-light: #96b5aa;
 	--accent-dark: #354b43;
 

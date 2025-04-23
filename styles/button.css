@@ -1,0 +1,32 @@
+button {
+	background: none;
+	color: var(--text);
+	border: none;
+	padding: 0.5em 1em;
+	border-radius: 0.5em;
+}
+button:hover {
+	background-color: var(--on-background);
+}
+
+button[primary] {
+	background-color: var(--primary);
+	color: var(--text-primary);
+}
+button[primary]:hover {
+	background-color: var(--primary-light);
+}
+button[secondary] {
+	background-color: var(--secondary);
+	color: var(--text-secondary);
+}
+button[secondary]:hover {
+	background-color: var(--secondary-light);
+}
+button[accent] {
+	background-color: var(--accent);
+	color: var(--text-accent);
+}
+button[accent]:hover {
+	background-color: var(--accent-light);
+}
