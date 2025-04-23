@@ -1,274 +1,105 @@
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
-/* Usual stuff for bg and aligns and stuff */
-* {
-	color: white;
-	font-family: "Inconsolata", monospace;
-
-	--bgc: #20202c;
-}
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wdth,wght@0,8..144,75..100,100..900;1,8..144,75..100,100..900&display=swap");
 html {
-	background-color: var(--bgc);
+	font-size: 18px;
+
+	--app-detail-bar-width: 300px;
+	--app-header-bar-height: 3lh;
+}
+body {
+	--text: #040316;
+	--background: #dce0e5;
+	--on-background: #c6c8cd;
+	--primary: #f39039;
+	--secondary: #906b5a;
+	--accent: #a8b6bd;
+	--warn: #ff0000;
+	--hover-highlight: rgba(0, 0, 0, 0.35);
+}
+body.dark-theme {
+	--text: #eae9fc;
+	--background: #1a1e23;
+	--on-background: #33353a;
+	--primary: #c6620c;
+	--secondary: #a5806f;
+	--accent: #425057;
+	--warn: #ff0000;
+	--hover-highlight: rgba(255, 255, 255, 0.35);
+}
+
+* {
+	font-family: "Pathway Extreme", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+	font-variation-settings: "wdth" 100;
+}
+body {
+	background-color: var(--background);
+	color: var(--text);
+
 	padding: 0;
 	margin: 0;
 }
-body {
-	padding: 0;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
 	margin: 0;
 }
 h1 {
-	margin: 5px;
-	font-weight: 300;
+	font-weight: 500;
 }
 
-h2.bigTitle {
-	margin: 5px;
-	font-size: 4.5rem;
-}
-p {
-	padding: 0;
-	margin: 0;
+span.flex-spacer {
+	flex: 1 1 auto;
 }
 
 #headbar {
-	position: sticky;
-	top: 0;
-	left: 0;
-	width: 100%;
-
-	display: flex;
-	justify-content: space-between;
-
-	border-radius: 5px;
-
-	background-color: rgba(0, 0, 0, 0.85);
-	box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.7);
-
-	margin: 0;
-	z-index: 99999999999999;
-}
-
-#content {
-	width: 100%;
-}
-
-#topBanner {
-	position: relative;
-	height: 30rem;
-	margin: 20px;
-	border-radius: 15px;
-	box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.5);
-	overflow: hidden;
-}
-#topBanner .hbContent {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 30%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-#topBanner .hbContent p {
-	padding-left: 15%;
-	text-align: left;
-}
-#topBanner #gradOverlay {
-	background: linear-gradient(
-		90deg,
-		rgba(0, 0, 0, 1) 0%,
-		rgba(0, 0, 0, 0.7441351540616247) 30%,
-		rgba(0, 0, 0, 0) 100%
-	);
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-#topBanner img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.actionRow {
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-}
-
-button::before {
-	content: "[ ";
-}
-button::after {
-	content: " ]";
-}
-
-button.material-symbols-outlined::before,
-button.material-symbols-outlined::after {
-	content: none;
-}
-
-button {
-	background-color: rgba(0, 0, 0, 0);
-	border: none;
-	color: unset;
-	font-weight: 600;
-	transition: 250ms;
-	border-radius: 5px;
-	letter-spacing: normal;
-}
-
-button:hover {
-	background-color: rgba(0, 0, 0, 0.2);
-	transition: 250ms;
-	border-radius: 5px;
-	letter-spacing: 0.1em;
-}
-
-button.playBig {
-	font-size: 1.5rem;
-	margin: 10px;
-}
-
-/* Video Row */
-
-h2.rowHeader {
-	margin-left: 30px;
-	margin-top: 20px;
-	margin-bottom: 0;
-}
-
-.videoRow {
-	position: relative;
-	display: flex;
-	flex-direction: row;
-	margin: 20px;
-	margin-top: 0;
-	overflow-x: hidden;
-	border-radius: 20px;
-}
-.videoRow .endOverlay {
+	height: var(--app-header-bar-height);
 	position: absolute;
 	top: 0;
 	right: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: end;
-	padding-right: 20px;
-	height: 100%;
-	width: 250px;
-	background: linear-gradient(
-		-90deg,
-		rgba(0, 0, 0, 1) 0%,
-		rgba(0, 0, 0, 0.819765406162465) 70%,
-		rgba(0, 0, 0, 0) 100%
-	);
-	z-index: 1000;
-}
-
-.video {
-	--w: 200px;
-	--h: 300px;
-
-	margin: 10px;
-	flex-shrink: 0;
-	transition: 0.8s;
-	width: var(--w);
-	height: var(--h);
-
-	border-radius: 15px;
-	overflow: hidden;
-	box-shadow: 0px 0px 30px 0px #000000;
-	background-color: rgba(0, 0, 0, 0.5);
-}
-
-.video:hover {
-	width: calc(var(--w) * 2);
-	transition: 0.8s;
-}
-
-.videoRow .video .cover {
-	position: absolute;
-	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-}
-.videoRow .video .cover img {
-	height: 100%;
-	object-fit: contain;
-}
-
-.videoRow .video .cover .center {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font-size: 80px;
-	color: #fff;
-}
-
-.videoRow .video .slide {
-	width: var(--w) !important;
-	height: var(--h);
-	transition: 0.5s;
-}
-
-.videoRow .video .slide.slide1 {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
-	transition: 0.7s;
-}
-
-.videoRow .video:hover .slide.slide1 {
-	transform: translateX(0px);
-}
-
-.videoRow .video .slide.slide2 {
-	position: relative;
-	display: flex;
-	/* justify-content: center;
-	align-items: center; */
-	padding: 20px;
 	box-sizing: border-box;
-	transition: 0.8s;
-	transform: translate(0px, calc(var(--h) * -1));
-}
-.videoRow .video:hover .slide.slide2 {
-	transform: translate(var(--w), calc(var(--h) * -1));
-	transition: 0.8s;
-}
+	border-bottom: 1px solid var(--text);
+	padding: 0 1lh;
 
-.slide.slide2 .content {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
-	flex: 1 1 auto;
+	column-gap: 1lh;
 }
 
-.content .spacer {
-	flex: 1 1 auto;
+#headbar h1 {
+	margin-right: 2rem;
 }
 
-.content p {
-	overflow: hidden;
-	display: -webkit-box;
-	-webkit-line-clamp: 7; /* number of lines to show */
-	line-clamp: 2;
-	-webkit-box-orient: vertical;
+a {
+	display: block;
+	font-size: x-large;
+	color: var(--text);
+	text-decoration: none;
 }
 
-.slide.slide2 .content .playBig {
-	font-size: 1rem;
+#sidebar {
+	position: absolute;
+	top: 3lh;
+	right: 0;
+	bottom: 0;
+	width: var(--app-detail-bar-width);
+	box-sizing: border-box;
+}
+#content {
+	position: absolute;
+	top: 3lh;
+	right: var(--app-detail-bar-width);
+	bottom: 0;
+	left: 0;
+	padding: 1lh;
+	box-sizing: border-box;
+	overflow: auto;
 }
