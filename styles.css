@@ -8,8 +8,9 @@ html {
 body {
 	/* https://www.realtimecolors.com/?colors=272a49-fef7e7-6c70a3-9ea2c8-4c59ec&fonts=Pathway%20Extreme-Pathway%20Extreme */
 	--text: #242634;
-	--text-dim: #5e6388;
+	--text-dim: #caccd4;
 	--background: #fef7e7;
+	--on-background: #feedc4;
 
 	--primary: #5c6093;
 	--primary-light: #9194ba;
@@ -17,7 +18,7 @@ body {
 
 	--secondary: #364c69;
 	--secondary-light: #89a2c2;
-	--secondary-dark: #3d5576;
+	--secondary-dark: #1a2533;
 
 	--accent: #405b51;
 	--accent-light: #96b5aa;
@@ -28,8 +29,9 @@ body {
 }
 body.dark-theme {
 	--text: #fef7e7;
-	--text-dim: #b8b3c2;
+	--text-dim: #55505f;
 	--background: #242634;
+	--on-background: #2d2f3f;
 
 	--primary: #5c6093;
 	--primary-light: #9194ba;
@@ -37,7 +39,7 @@ body.dark-theme {
 
 	--secondary: #364c69;
 	--secondary-light: #89a2c2;
-	--secondary-dark: #3d5576;
+	--secondary-dark: #1a2533;
 
 	--accent: #405b51;
 	--accent-light: #96b5aa;
@@ -86,7 +88,7 @@ span.flex-spacer {
 	right: 0;
 	left: 0;
 	box-sizing: border-box;
-	border-bottom: 1px solid var(--text);
+	border-bottom: 1px solid var(--text-dim);
 	padding: 0 1lh;
 
 	display: flex;
@@ -113,6 +115,9 @@ a {
 	bottom: 0;
 	width: var(--app-detail-bar-width);
 	box-sizing: border-box;
+	border-left: 1px solid var(--text-dim);
+	padding-left: 1lh;
+	padding-top: 0.75lh;
 }
 #content {
 	position: absolute;
@@ -123,4 +128,5 @@ a {
 	padding: 1lh;
 	box-sizing: border-box;
 	overflow: auto;
+	overflow-x: hidden;
 }
