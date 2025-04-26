@@ -73,8 +73,8 @@ body {
 #background-container {
 	background: linear-gradient(
 		45deg,
-		var(--primary) 0%,
-		var(--secondary) 100%
+		var(--on-background) 0%,
+		var(--accent-light) 100%
 	);
 	position: absolute;
 	top: 0;
@@ -88,6 +88,13 @@ body {
 		100% 0,
 		100% 100%,
 		0 100%
+	);
+}
+.dark-theme #background-container {
+	background: linear-gradient(
+		45deg,
+		var(--on-background) 0%,
+		var(--accent) 100%
 	);
 }
 
