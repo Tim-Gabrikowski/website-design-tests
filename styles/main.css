@@ -70,6 +70,27 @@ body {
 	margin: 0;
 }
 
+#background-container {
+	background: linear-gradient(
+		45deg,
+		var(--primary) 0%,
+		var(--secondary) 100%
+	);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	overflow: hidden;
+	clip-path: polygon(
+		0 0,
+		100% 0,
+		100% 100%,
+		0 100%
+	);
+}
+
 h1,
 h2,
 h3,
@@ -89,18 +110,22 @@ span.flex-spacer {
 
 #headbar {
 	height: var(--app-header-bar-height);
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
 	left: 0;
 	box-sizing: border-box;
-	border-bottom: 1px solid var(--text-dim);
+
 	padding: 0 1lh;
 
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	column-gap: 1lh;
+
+	box-sizing: border-box;
+
+	border-radius: 0 0 0.5em 0.5em;
 }
 
 #headbar h1 {

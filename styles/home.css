@@ -25,7 +25,6 @@ div.menu-item {
 	justify-content: space-between;
 	row-gap: 1lh;
 
-	background-color: var(--on-background);
 	padding: 1lh;
 	border-radius: 1em;
 }
